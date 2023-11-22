@@ -10,7 +10,7 @@ import com.it.vnc.models.User;
 public class UserService {
 
 @Autowired UserDao dao;
-	public void save(User user) throws Exception {
+	public void save(User user) {
 		dao.save(user);
 	
 	}

@@ -12,8 +12,8 @@ public class UserDaoImpl implements UserDao{
 	@Override
 	public void save(User user) {
 
-		String sqlQuery= "insert into users"+"(id,name,email,password)"+"VALUES"+ "(?,?,?,?)";
-		jdbcTemp.update(sqlQuery, user.getEmail(),user.getName(),user.getPassword(),user.getId());
+		String sqlQuery= "insert into vnc"+"(name,password)"+"VALUES"+ "(?,?)";
+		jdbcTemp.update(sqlQuery,user.getName(),user.getPassword());
 		
 	}
 
